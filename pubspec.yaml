@@ -76,11 +76,14 @@ flutter:
     - family: Cera
       fonts:
         - asset: fonts/Cera PRO Black.otf
-          style: pro
+          # style: 'bold'
+          weight: 700
         - asset: fonts/cera-130.otf
-          weight: 300
+          # style: 'medium'
+          weight: 500
         - asset: fonts/cera-basic.otf
-          style: basic
+          # style: 'light'
+          weight: 300
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
