@@ -3,8 +3,8 @@ import '../other_components/next_button.dart';
 import '../other_components/header_about.dart';
 import '../const.dart';
 
-class aboutPage extends StatelessWidget {
-  const aboutPage({Key? key}) : super(key: key);
+class AboutPage extends StatelessWidget {
+  const AboutPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

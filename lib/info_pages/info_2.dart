@@ -45,7 +45,7 @@ class _InfoPart2State extends State<InfoPart2> {
           Expanded(
             flex: 7,
             child: RightInfo('No ideas \n\nPandemic? \n\nStart your search',
-                'assets/onboar-1-01.png', 'InfoPart2()'),
+                'assets/onboar-1-01.png', 2),
           )
         ],
       ),

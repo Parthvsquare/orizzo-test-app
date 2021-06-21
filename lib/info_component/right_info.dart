@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../other_components/next_button.dart';
 import '../info_pages/info_2.dart';
+import '../on_boarding/about.dart';
 import '../const.dart';
 
 class RightInfo extends StatelessWidget {
@@ -40,10 +41,10 @@ class RightInfo extends StatelessWidget {
                 margin: EdgeInsets.only(top: 180),
                 child: GestureDetector(
                   onTap: () {
-                    // Navigator.push(
-                    //   context,
-                    //   MaterialPageRoute(builder: (context) => theNextScreen()),
-                    // );
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => theNewPage()),
+                    );
                     InfoPart2();
                   },
                   child: NextButton(
@@ -69,5 +70,16 @@ class RightInfo extends StatelessWidget {
             ))
       ],
     );
+  }
+
+  theNewPage() {
+    if (theNextScreen == 1) {
+      return InfoPart2();
+    }
+    if (theNextScreen == 2) {
+      return AboutPage();
+    } else {
+      return InfoPart2();
+    }
   }
 }

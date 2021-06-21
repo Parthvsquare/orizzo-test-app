@@ -47,7 +47,7 @@ class _InfoPart1State extends State<InfoPart1> {
             child: RightInfo(
                 'Planning \n\nanything special? \n\nNo way to get out!',
                 'assets/onboar-2-01.png',
-                'InfoPart2()'),
+                1),
           )
         ],
       ),
