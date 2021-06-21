@@ -1,4 +1,6 @@
 import 'dart:async';
+import 'package:orizzo/info_pages/info_2.dart';
+
 import '../info_pages/info.dart';
 import 'package:flutter/material.dart';
 import '../const.dart';
@@ -23,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   route() {
     Navigator.pushReplacement(
-        context, MaterialPageRoute(builder: (context) => infoPart1()));
+        context, MaterialPageRoute(builder: (context) => InfoPart1()));
   }
 
   @override
