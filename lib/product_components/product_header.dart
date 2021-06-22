@@ -5,6 +5,7 @@ class ProductHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Container(
           height: 108,
@@ -12,7 +13,7 @@ class ProductHeader extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/logo-onwhite.png'),
-              // fit: BoxFit.fill,
+              fit: BoxFit.fitHeight,
             ),
           ),
         ),
@@ -22,7 +23,7 @@ class ProductHeader extends StatelessWidget {
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/logo-onwhite.png'),
-              // fit: BoxFit.fill,
+              fit: BoxFit.fitHeight,
             ),
           ),
         )

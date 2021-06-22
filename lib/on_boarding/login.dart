@@ -20,15 +20,40 @@ class _LoginPageState extends State<LoginPage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          HeaderAbout(),
-          Container(
-            child: LoginInput(),
+          // HeaderAbout(),
+          // Container(
+          //   height: 100,
+          //   child: LoginInput(),
+          // ),
+          // Container(
+          //   child: NextButton('login'),
+          // ),
+          // Container(
+          //   child: LoginBottom(),
+          // )
+          Expanded(
+            flex: 5,
+            child: Container(
+              child: HeaderAbout(),
+            ),
           ),
-          Container(
-            child: NextButton('login'),
+          Expanded(
+            flex: 2,
+            child: Container(
+              child: LoginInput(),
+            ),
           ),
-          Container(
-            child: LoginBottom(),
+          Expanded(
+            flex: 1,
+            child: Container(
+              child: NextButton('Login'),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              child: LoginBottom(),
+            ),
           )
         ],
       ),

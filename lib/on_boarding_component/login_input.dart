@@ -2,22 +2,18 @@ import 'package:flutter/material.dart';
 import '../const.dart';
 
 class LoginInput extends StatelessWidget {
-  GlobalKey<FormState> formkey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Container(
-          child: new TextFormField(
+    return Scaffold(
+      body: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          new TextField(
             decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Password',
-                hintText: 'Enter secure password'),
+                border: OutlineInputBorder(), hintText: 'Enter a search term'),
           ),
-        ),
-        Container(),
-      ],
+        ],
+      ),
     );
   }
 }
