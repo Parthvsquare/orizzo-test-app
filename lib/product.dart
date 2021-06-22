@@ -34,16 +34,17 @@ class ProductPage extends StatelessWidget {
             flex: 1,
             child: Container(
               width: double.infinity,
+              height: double.infinity,
               margin: EdgeInsets.all(20),
               padding: EdgeInsets.only(top: 20),
               child: Text(
-                'It\s Easier now',
+                'It\s Easier now.'.toUpperCase(),
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                  fontSize: 22,
+                  fontSize: 24,
                   color: Color.fromRGBO(0x30, 0x30, 0x30, 1),
                   fontFamily: 'Cera',
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w900,
                   decoration: TextDecoration.none,
                   height: 0.7,
                 ),
@@ -54,7 +55,7 @@ class ProductPage extends StatelessWidget {
             flex: 1,
             child: Container(
               width: double.infinity,
-              margin: EdgeInsets.all(20),
+              margin: EdgeInsets.only(top: 10, right: 20, left: 20, bottom: 20),
               child: Text(
                 'Search how specific you need!\n\nAccording to availability, location or wish? ',
                 textAlign: TextAlign.start,
