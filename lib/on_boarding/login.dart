@@ -18,6 +18,7 @@ class _LoginPageState extends State<LoginPage> {
     return ColoredBox(
       color: Colors.white,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           HeaderAbout(),
           Container(
