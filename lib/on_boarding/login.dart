@@ -2,34 +2,35 @@ import 'package:flutter/material.dart';
 import '../const.dart';
 import '../other_components/header_about.dart';
 import '../other_components/next_button.dart';
+import '../on_boarding_component/login_bottom_bt.dart';
+import '../on_boarding_component/login_input.dart';
 
-class loginPage extends StatefulWidget {
-  const loginPage({Key? key}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  const LoginPage({Key? key}) : super(key: key);
 
   @override
-  _loginPageState createState() => _loginPageState();
+  _LoginPageState createState() => _LoginPageState();
 }
 
-class _loginPageState extends State<loginPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HeaderAbout(),
-        Container(
-          child: Text('NEW TO CITY? GET YOUR FAVORITE HERE'),
-        ),
-        Container(
-          child: Text(
-              'Search how specific you need! According to availability, location or wish?'),
-        ),
-        Container(
-          child: NextButton('login'),
-        ),
-        Container(
-          child: Text("Skip this"),
-        )
-      ],
+    return ColoredBox(
+      color: Colors.white,
+      child: Column(
+        children: [
+          HeaderAbout(),
+          Container(
+            child: LoginInput(),
+          ),
+          Container(
+            child: NextButton('login'),
+          ),
+          Container(
+            child: LoginBottom(),
+          )
+        ],
+      ),
     );
   }
 }

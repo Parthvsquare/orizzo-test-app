@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../other_components/next_button.dart';
 import '../other_components/header_about.dart';
+import '../on_boarding/login.dart';
 import '../product.dart';
 import '../const.dart';
 
@@ -48,7 +49,17 @@ class AboutPage extends StatelessWidget {
           ),
           Container(
             padding: EdgeInsets.only(bottom: 50),
-            child: NextButton('next'),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => LoginPage()),
+                );
+              },
+              child: NextButton(
+                'next',
+              ),
+            ),
           ),
           Container(
             child: GestureDetector(

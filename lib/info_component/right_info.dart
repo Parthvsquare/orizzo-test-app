@@ -45,7 +45,6 @@ class RightInfo extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (context) => theNewPage()),
                 );
-                InfoPart2();
               },
               child: NextButton(
                 'next',

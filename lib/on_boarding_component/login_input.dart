@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../const.dart';
 
-class ProductGallery extends StatelessWidget {
+class LoginBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
