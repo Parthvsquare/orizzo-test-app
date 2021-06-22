@@ -30,27 +30,29 @@ class RightInfo extends StatelessWidget {
           ),
         ),
         Expanded(
-            flex: 3,
-            child: Container(
-                // width: 140
-                alignment: Alignment.bottomRight,
-                padding: EdgeInsets.only(
-                  left: 10,
-                  right: 20,
-                ),
-                margin: EdgeInsets.only(top: 180),
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => theNewPage()),
-                    );
-                    InfoPart2();
-                  },
-                  child: NextButton(
-                    'next',
-                  ),
-                ))),
+          flex: 3,
+          child: Container(
+            // width: 140
+            alignment: Alignment.bottomRight,
+            padding: EdgeInsets.only(
+              left: 10,
+              right: 20,
+            ),
+            margin: EdgeInsets.only(top: 180),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => theNewPage()),
+                );
+                InfoPart2();
+              },
+              child: NextButton(
+                'next',
+              ),
+            ),
+          ),
+        ),
         Expanded(
             flex: 3,
             child: Container(

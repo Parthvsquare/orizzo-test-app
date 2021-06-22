@@ -9,21 +9,21 @@ class HeaderAbout extends StatelessWidget {
       children: [
         Container(
           height: 108,
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.only(top: 20, bottom: 40, right: 20, left: 20),
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/logo-onwhite.png'),
-              // fit: BoxFit.fill,
+              fit: BoxFit.fitHeight,
             ),
           ),
         ),
         Container(
           height: 108,
-          margin: EdgeInsets.all(20),
+          margin: EdgeInsets.only(top: 40, bottom: 20, right: 20, left: 20),
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage('assets/Branding-Icons.png'),
-              // fit: BoxFit.fill,
+              fit: BoxFit.fitHeight,
             ),
           ),
         ),
