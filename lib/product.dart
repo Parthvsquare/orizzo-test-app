@@ -82,7 +82,38 @@ class ProductPage extends StatelessWidget {
           Expanded(
             flex: 4,
             child: Container(
-              child: ProductGallery(),
+              padding:
+                  EdgeInsets.only(top: 15, right: 20, left: 20, bottom: 15),
+              width: double.infinity,
+              child: Column(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    margin: EdgeInsets.all(10),
+                    child: Text(
+                      'Inspired?, Orrizo, is not only for food!',
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: PrimaryColor,
+                        fontFamily: 'Cera',
+                        fontWeight: FontWeight.w300,
+                        decoration: TextDecoration.none,
+                        height: 0.7,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    // padding: EdgeInsets.only(right: 20, left: 20),
+                    child: ProductGallery(
+                      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                      'Food product',
+                    ),
+                    // ProductGallery(),
+                    // ProductGallery(),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
