@@ -5,8 +5,8 @@ import './product_components/product_header.dart';
 import './product_components/product_icons.dart';
 import './product_components/product_gallery.dart';
 
-class productPage extends StatelessWidget {
-  const productPage({Key? key}) : super(key: key);
+class ProductPage extends StatelessWidget {
+  const ProductPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
