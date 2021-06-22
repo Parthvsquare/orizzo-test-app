@@ -1,23 +1,67 @@
 import 'package:flutter/material.dart';
 import '../const.dart';
 
-class LoginInput extends StatelessWidget {
+class LoginInput extends StatefulWidget {
+  const LoginInput({Key? key}) : super(key: key);
+
+  @override
+  _LoginInputState createState() => _LoginInputState();
+}
+
+class _LoginInputState extends State<LoginInput> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: new Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          new TextField(
-            decoration: InputDecoration(
-                border: OutlineInputBorder(), hintText: 'Enter a search term'),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        new TextFormField(
+          decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderSide: new BorderSide(color: PrimaryAssentColor),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: new BorderSide(color: PrimaryAssentColor),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            labelText: "Enter Registered Mail",
+            labelStyle: TextStyle(
+              fontSize: 16,
+              color: PrimaryColor,
+              fontFamily: 'Cera',
+            ),
+            suffixIcon: Icon(Icons.mail_outline),
+            suffixStyle: TextStyle(
+              color: PrimaryColor,
+            ),
           ),
-          new TextField(
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 10),
+          child: new TextFormField(
             decoration: InputDecoration(
-                border: OutlineInputBorder(), hintText: 'Enter a search term'),
+              border: OutlineInputBorder(
+                borderSide: new BorderSide(color: PrimaryAssentColor),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              focusedBorder: OutlineInputBorder(
+                borderSide: new BorderSide(color: PrimaryAssentColor),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              labelText: "Enter Password",
+              labelStyle: TextStyle(
+                fontSize: 16,
+                color: PrimaryColor,
+                fontFamily: 'Cera',
+              ),
+              suffixIcon: Icon(Icons.remove_red_eye),
+              suffixStyle: TextStyle(
+                color: PrimaryColor,
+              ),
+            ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

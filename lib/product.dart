@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'const.dart';
 
@@ -13,39 +14,76 @@ class ProductPage extends StatelessWidget {
     return ColoredBox(
       color: Colors.white,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          ProductHeader(),
-          Container(
-            child: Text(
-              'It\s Easier now',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                color: PrimaryAssentColor,
-                fontFamily: 'Cera',
-                fontWeight: FontWeight.w700,
-                decoration: TextDecoration.none,
-                height: 0.7,
+          Expanded(
+            flex: 1,
+            child: ColoredBox(
+              color: Colors.white,
+            ),
+          ),
+          Expanded(
+              flex: 1,
+              child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(top: 0),
+                child: ProductHeader(),
+              )),
+          Expanded(
+            flex: 1,
+            child: Container(
+              width: double.infinity,
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.only(top: 20),
+              child: Text(
+                'It\s Easier now',
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: 22,
+                  color: PrimaryColor,
+                  fontFamily: 'Cera',
+                  fontWeight: FontWeight.w700,
+                  decoration: TextDecoration.none,
+                  height: 0.7,
+                ),
               ),
             ),
           ),
-          Container(
-            child: Text(
-              'Search how specific you need!\n\nAccording to availability, location or wish? ',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                color: PrimaryAssentColor,
-                fontFamily: 'Cera',
-                fontWeight: FontWeight.w700,
-                decoration: TextDecoration.none,
-                height: 0.7,
+          Expanded(
+            flex: 1,
+            child: Container(
+              width: double.infinity,
+              margin: EdgeInsets.all(20),
+              child: Text(
+                'Search how specific you need!\n\nAccording to availability, location or wish? ',
+                textAlign: TextAlign.start,
+                style: TextStyle(
+                  fontSize: 16,
+                  color: PrimaryColor,
+                  fontFamily: 'Cera',
+                  fontWeight: FontWeight.w500,
+                  decoration: TextDecoration.none,
+                  height: 0.7,
+                ),
               ),
             ),
           ),
-          ProductIcons(),
-          ProductGallery(),
+          Expanded(
+              flex: 2,
+              child: ColoredBox(
+                color: Color.fromRGBO(245, 245, 245, 1),
+                child: Container(
+                  width: double.infinity,
+                  child: ProductIcons(),
+                ),
+              )),
+          Expanded(
+            flex: 4,
+            child: Container(
+              child: ProductGallery(),
+            ),
+          ),
         ],
       ),
     );

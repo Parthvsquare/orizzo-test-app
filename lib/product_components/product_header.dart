@@ -5,25 +5,26 @@ class ProductHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          height: 108,
-          margin: EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/logo-onwhite.png'),
-              fit: BoxFit.fitHeight,
-            ),
-          ),
-        ),
+            margin: EdgeInsets.only(left: 20),
+            width: 80.00,
+            height: 80.00,
+            decoration: new BoxDecoration(
+              image: new DecorationImage(
+                image: ExactAssetImage('assets/logo-onwhite.png'),
+                fit: BoxFit.fitHeight,
+              ),
+            )),
         Container(
-          height: 108,
-          margin: EdgeInsets.all(20),
+          width: 30.00,
+          height: 30.00,
+          margin: EdgeInsets.only(right: 20),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/logo-onwhite.png'),
-              fit: BoxFit.fitHeight,
+              image: AssetImage('assets/menu-01.png'),
+              //fit: BoxFit.fitHeight,
             ),
           ),
         )

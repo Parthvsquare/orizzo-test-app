@@ -13,74 +13,92 @@ class AboutPage extends StatelessWidget {
     return ColoredBox(
       color: Colors.white,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          HeaderAbout(),
-          Container(
-            padding: EdgeInsets.all(40),
-            alignment: Alignment.center,
-            child: Text(
-              'NEW TO CITY? GET YOUR \n\nFAVORITE HERE',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 22,
-                color: PrimaryAssentColor,
-                fontFamily: 'Cera',
-                fontWeight: FontWeight.w700,
-                decoration: TextDecoration.none,
-                height: 0.7,
-              ),
-            ),
+          Expanded(
+            flex: 4,
+            child: HeaderAbout(),
           ),
-          Container(
-            padding: EdgeInsets.only(bottom: 40, right: 20, left: 20),
-            child: Text(
-              'Search how specific you need!\n\nAccording to availability, location or wish?',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 16,
-                color: PrimaryColor,
-                fontWeight: FontWeight.w800,
-                fontFamily: 'Cera',
-                decoration: TextDecoration.none,
-                height: 0.7,
-              ),
-            ),
-          ),
-          Container(
-            padding: EdgeInsets.only(bottom: 50),
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginPage()),
-                );
-              },
-              child: NextButton(
-                'next',
-              ),
-            ),
-          ),
-          Container(
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ProductPage()),
-                );
-              },
-              child: Text(
-                "SKIP THIS",
-                style: TextStyle(
-                  fontSize: 18,
-                  color: PrimaryAssentColor,
-                  fontWeight: FontWeight.w800,
-                  fontFamily: 'Cera',
-                  decoration: TextDecoration.none,
+          Expanded(
+              flex: 1,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    // padding: EdgeInsets.all(40),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'NEW TO CITY? GET YOUR \n\nFAVORITE HERE',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: PrimaryAssentColor,
+                        fontFamily: 'Cera',
+                        fontWeight: FontWeight.w700,
+                        decoration: TextDecoration.none,
+                        height: 0.7,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    // padding: EdgeInsets.only(bottom: 40, right: 20, left: 20),
+                    child: Text(
+                      'Search how specific you need!\n\nAccording to availability, location or wish?',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: PrimaryColor,
+                        fontWeight: FontWeight.w800,
+                        fontFamily: 'Cera',
+                        decoration: TextDecoration.none,
+                        height: 0.7,
+                      ),
+                    ),
+                  ),
+                ],
+              )),
+          Expanded(
+            flex: 1,
+            child: Container(
+              // padding: EdgeInsets.only(bottom: 50),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginPage()),
+                  );
+                },
+                child: NextButton(
+                  'next',
                 ),
               ),
             ),
-          )
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.only(bottom: 30),
+              alignment: Alignment.bottomCenter,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProductPage()),
+                  );
+                },
+                child: Text(
+                  "SKIP THIS",
+                  style: TextStyle(
+                    fontSize: 18,
+                    color: PrimaryAssentColor,
+                    fontWeight: FontWeight.w800,
+                    fontFamily: 'Cera',
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

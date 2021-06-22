@@ -4,6 +4,7 @@ import '../other_components/header_about.dart';
 import '../other_components/next_button.dart';
 import '../on_boarding_component/login_bottom_bt.dart';
 import '../on_boarding_component/login_input.dart';
+import '../product.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -15,39 +16,34 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
-    return ColoredBox(
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // HeaderAbout(),
-          // Container(
-          //   height: 100,
-          //   child: LoginInput(),
-          // ),
-          // Container(
-          //   child: NextButton('login'),
-          // ),
-          // Container(
-          //   child: LoginBottom(),
-          // )
           Expanded(
-            flex: 5,
+            flex: 4,
             child: Container(
               child: HeaderAbout(),
             ),
           ),
           Expanded(
-            flex: 2,
-            child: Container(
-              child: LoginInput(),
-            ),
-          ),
+              flex: 2,
+              child: Container(
+                padding: EdgeInsets.all(20),
+                child: LoginInput(),
+              )),
           Expanded(
             flex: 1,
-            child: Container(
-              child: NextButton('Login'),
-            ),
+            child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ProductPage()),
+                  );
+                },
+                child: Container(
+                  child: NextButton('Login'),
+                )),
           ),
           Expanded(
             flex: 1,
