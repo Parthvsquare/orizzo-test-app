@@ -90,7 +90,7 @@ class AboutPage extends StatelessWidget {
                   "SKIP THIS",
                   style: TextStyle(
                     fontSize: 18,
-                    color: PrimaryAssentColor,
+                    color: Color.fromRGBO(0x219, 0x160, 0x120, 1),
                     fontWeight: FontWeight.w800,
                     fontFamily: 'Cera',
                     decoration: TextDecoration.none,
