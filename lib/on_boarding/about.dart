@@ -8,23 +8,51 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HeaderAbout(),
-        Container(
-          child: Text('NEW TO CITY? GET YOUR FAVORITE HERE'),
-        ),
-        Container(
-          child: Text(
-              'Search how specific you need! According to availability, location or wish?'),
-        ),
-        Container(
-          child: NextButton('next'),
-        ),
-        Container(
-          child: Text("Skip this"),
-        )
-      ],
+    return ColoredBox(
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          HeaderAbout(),
+          Container(
+            alignment: Alignment.center,
+            child: Text(
+              'NEW TO CITY? GET YOUR \n\nFAVORITE HERE',
+              style: TextStyle(
+                fontSize: 18,
+                color: PrimaryColor,
+                fontWeight: FontWeight.w800,
+                decoration: TextDecoration.none,
+              ),
+            ),
+          ),
+          Container(
+            child: Text(
+              'Search how specific you need! According to availability, location or wish?',
+              style: TextStyle(
+                fontSize: 18,
+                color: PrimaryColor,
+                fontWeight: FontWeight.w800,
+                decoration: TextDecoration.none,
+              ),
+            ),
+          ),
+          Container(
+            child: NextButton('next'),
+          ),
+          Container(
+            child: Text(
+              "Skip this",
+              style: TextStyle(
+                fontSize: 18,
+                color: PrimaryColor,
+                fontWeight: FontWeight.w800,
+                decoration: TextDecoration.none,
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

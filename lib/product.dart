@@ -10,21 +10,24 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        ProductHeader(),
-        Container(
-          child: Text('It\s Easier now'),
-        ),
-        Container(
-          child: Text('Search how specific you need! '),
-        ),
-        Container(
-          child: Text('According to availability, location or wish?'),
-        ),
-        ProductIcons(),
-        ProductGallery(),
-      ],
+    return ColoredBox(
+      color: Colors.white,
+      child: Column(
+        children: [
+          ProductHeader(),
+          Container(
+            child: Text('It\s Easier now'),
+          ),
+          Container(
+            child: Text('Search how specific you need! '),
+          ),
+          Container(
+            child: Text('According to availability, location or wish?'),
+          ),
+          ProductIcons(),
+          ProductGallery(),
+        ],
+      ),
     );
   }
 }
