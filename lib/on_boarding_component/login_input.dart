@@ -12,6 +12,10 @@ class LoginInput extends StatelessWidget {
             decoration: InputDecoration(
                 border: OutlineInputBorder(), hintText: 'Enter a search term'),
           ),
+          new TextField(
+            decoration: InputDecoration(
+                border: OutlineInputBorder(), hintText: 'Enter a search term'),
+          ),
         ],
       ),
     );
