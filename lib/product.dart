@@ -16,13 +16,32 @@ class ProductPage extends StatelessWidget {
         children: [
           ProductHeader(),
           Container(
-            child: Text('It\s Easier now'),
+            child: Text(
+              'It\s Easier now',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 22,
+                color: PrimaryAssentColor,
+                fontFamily: 'Cera',
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.none,
+                height: 0.7,
+              ),
+            ),
           ),
           Container(
-            child: Text('Search how specific you need! '),
-          ),
-          Container(
-            child: Text('According to availability, location or wish?'),
+            child: Text(
+              'Search how specific you need!\n\nAccording to availability, location or wish? ',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 22,
+                color: PrimaryAssentColor,
+                fontFamily: 'Cera',
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.none,
+                height: 0.7,
+              ),
+            ),
           ),
           ProductIcons(),
           ProductGallery(),
