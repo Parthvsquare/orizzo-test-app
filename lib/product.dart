@@ -13,6 +13,7 @@ class ProductPage extends StatelessWidget {
     return ColoredBox(
       color: Colors.white,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ProductHeader(),
           Container(
