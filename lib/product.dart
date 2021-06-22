@@ -41,7 +41,7 @@ class ProductPage extends StatelessWidget {
                 textAlign: TextAlign.start,
                 style: TextStyle(
                   fontSize: 22,
-                  color: PrimaryColor,
+                  color: Color.fromRGBO(0x30, 0x30, 0x30, 1),
                   fontFamily: 'Cera',
                   fontWeight: FontWeight.w700,
                   decoration: TextDecoration.none,
@@ -59,8 +59,8 @@ class ProductPage extends StatelessWidget {
                 'Search how specific you need!\n\nAccording to availability, location or wish? ',
                 textAlign: TextAlign.start,
                 style: TextStyle(
-                  fontSize: 16,
-                  color: PrimaryColor,
+                  fontSize: 17,
+                  color: Color.fromRGBO(0x30, 0x30, 0x30, 1),
                   fontFamily: 'Cera',
                   fontWeight: FontWeight.w500,
                   decoration: TextDecoration.none,
