@@ -62,6 +62,23 @@ class _LoginInputState extends State<LoginInput> {
             ),
           ),
         ),
+        Container(
+          height: 10,
+          margin: EdgeInsets.only(top: 10),
+          width: double.infinity,
+          child: Text(
+            'Forgot Password?',
+            textAlign: TextAlign.right,
+            style: TextStyle(
+              fontSize: 14,
+              color: PrimaryColor,
+              fontFamily: 'Cera',
+              fontWeight: FontWeight.w300,
+              decoration: TextDecoration.none,
+              height: 0.7,
+            ),
+          ),
+        )
       ],
     );
   }

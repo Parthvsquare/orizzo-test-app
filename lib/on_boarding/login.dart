@@ -21,11 +21,12 @@ class _LoginPageState extends State<LoginPage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Expanded(
-            flex: 4,
-            child: Container(
-              child: HeaderAbout(),
-            ),
-          ),
+              flex: 4,
+              child: SingleChildScrollView(
+                child: Container(
+                  child: HeaderAbout(),
+                ),
+              )),
           Expanded(
               flex: 2,
               child: Container(

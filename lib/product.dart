@@ -11,12 +11,13 @@ class ProductPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ColoredBox(
-      color: Colors.white,
-      child: Column(
+    return Scaffold(
+      body:
+          // color: Colors.white,
+          Column(
         // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
+        children: <Widget>[
           Expanded(
             flex: 1,
             child: ColoredBox(
@@ -104,13 +105,25 @@ class ProductPage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    // padding: EdgeInsets.only(right: 20, left: 20),
-                    child: ProductGallery(
-                      'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-                      'Food product',
+                    child: SingleChildScrollView(
+                      child: Column(
+                        // padding: EdgeInsets.only(right: 20, left: 20),
+                        children: [
+                          ProductGallery(
+                            'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                            'Food product',
+                          ),
+                          ProductGallery(
+                            'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                            'Food product',
+                          ),
+                          // ProductGallery(
+                          //   'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+                          //   'Food product',
+                          // ),
+                        ],
+                      ),
                     ),
-                    // ProductGallery(),
-                    // ProductGallery(),
                   ),
                 ],
               ),
