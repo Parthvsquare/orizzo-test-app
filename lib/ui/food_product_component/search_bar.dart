@@ -12,32 +12,49 @@ class SearchBar extends StatefulWidget {
 class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        height: 100,
-        child: new TextFormField(
+    return Column(
+      // mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: <Widget>[
+        new TextFormField(
+          textAlign: TextAlign.start,
+          // textAlignVertical: TextAlignVertical.bottom,
+          // scrollPadding: EdgeInsets.only(bottom: 2),
           decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderSide: new BorderSide(color: PrimaryAssentColor),
+            contentPadding: EdgeInsets.all(15.0),
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: PrimaryColor),
               borderRadius: BorderRadius.circular(20),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: new BorderSide(color: PrimaryAssentColor),
+              borderSide: BorderSide(color: PrimaryColor),
               borderRadius: BorderRadius.circular(20),
             ),
-            labelText: "Enter Registered Mail",
-            labelStyle: TextStyle(
+            errorBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.red),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            // hintText: "Search for Restaaurant".toUpperCase(),
+            hintText: "Search for restaurant".toUpperCase(),
+            hintStyle: TextStyle(
               fontSize: 16,
               color: PrimaryColor,
               fontFamily: 'Cera',
+              fontWeight: FontWeight.w900,
             ),
-            suffixIcon: Icon(Icons.mail_outline),
-            suffixStyle: TextStyle(
-              color: PrimaryColor,
+            prefixIcon: Padding(
+              padding: EdgeInsets.only(left: 50),
+              child: Icon(Icons.search_rounded),
             ),
+            // prefixStyle: Color.black
           ),
+          // controller: ,
         ),
-      ),
+      ],
     );
   }
 }

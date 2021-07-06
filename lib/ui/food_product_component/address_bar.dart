@@ -13,19 +13,37 @@ class _AddressBarState extends State<AddressBar> {
   @override
   Widget build(BuildContext context) {
     return ColoredBox(
-      color: Colors.white,
-      child: Container(
-        child: Text(
-          "you;re in: r.s puram, coimatore",
-          style: TextStyle(
-            height: 0.7,
-            fontSize: 16,
-            color: PrimaryColor,
-            fontWeight: FontWeight.w300,
-            decoration: TextDecoration.none,
-            fontFamily: 'Cera',
+      color: Colors.transparent,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.only(
+              bottom: 20,
+            ),
+            child: Text(
+              "you're in: r.s puram, coimatore".toUpperCase(),
+              style: TextStyle(
+                // height: 1.5,
+                fontSize: 14,
+                color: PrimaryColor,
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.underline,
+                fontFamily: 'Cera',
+              ),
+            ),
           ),
-        ),
+          Container(
+            margin: EdgeInsets.only(bottom: 20, left: 20),
+            // heig
+            child: Icon(
+              Icons.arrow_circle_down,
+              color: PrimaryAssentColor,
+              size: 24,
+            ),
+          ),
+        ],
       ),
     );
   }
