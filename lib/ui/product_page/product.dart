@@ -1,10 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'const.dart';
+import '../../resources/const.dart';
 
-import './product_components/product_header.dart';
-import './product_components/product_icons.dart';
-import './product_components/product_gallery.dart';
+import 'package:orizzo/ui/product_component/product_header.dart';
+import 'package:orizzo/ui/product_component/product_icons.dart';
+import 'package:orizzo/ui/product_component/product_gallery.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({Key? key}) : super(key: key);

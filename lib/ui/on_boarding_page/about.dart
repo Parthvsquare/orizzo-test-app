@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import '../other_components/next_button.dart';
-import '../other_components/header_about.dart';
-import '../on_boarding/login.dart';
-import '../product.dart';
-import '../const.dart';
+import 'package:orizzo/util/next_button.dart';
+import 'package:orizzo/util/header_about.dart';
+import '../on_boarding_page/login.dart';
+import 'package:orizzo/ui/product_page/product.dart';
+import 'package:orizzo/resources/const.dart';
 
 class AboutPage extends StatelessWidget {
   const AboutPage({Key? key}) : super(key: key);

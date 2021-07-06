@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'const.dart';
-import 'other_page/splash_screen.dart';
+import 'package:orizzo/ui/splash_page/splash_screen.dart';
 
 void main() => runApp(MyApp());
 

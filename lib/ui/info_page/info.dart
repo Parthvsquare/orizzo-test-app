@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../info_component/left_bar.dart';
 import '../info_component/right_info.dart';
-import '../const.dart';
+import 'package:orizzo/resources/const.dart';
 
 class InfoPart1 extends StatefulWidget {
   // const InfoPart1({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../const.dart';
+import 'package:orizzo/resources/const.dart';
 
 class LoginInput extends StatefulWidget {
   const LoginInput({Key? key}) : super(key: key);

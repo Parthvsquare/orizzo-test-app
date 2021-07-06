@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import '../const.dart';
+import 'package:orizzo/resources/const.dart';
 
 // ignore: must_be_immutable
 class LeftBar extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../const.dart';
+import 'package:orizzo/resources/const.dart';
 
 // ignore: must_be_immutable
 class NextButton extends StatelessWidget {

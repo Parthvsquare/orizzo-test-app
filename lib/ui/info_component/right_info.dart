@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import '../other_components/next_button.dart';
-import '../info_pages/info_2.dart';
-import '../on_boarding/about.dart';
-import '../const.dart';
+import 'package:orizzo/util/next_button.dart';
+import '../info_page/info_2.dart';
+import '../on_boarding_page/about.dart';
+import 'package:orizzo/resources/const.dart';
 
 class RightInfo extends StatelessWidget {
   var bottomText;

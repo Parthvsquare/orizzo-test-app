@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../const.dart';
+import 'package:orizzo/resources/const.dart';
+import '../food_product_page/food_product.dart';
 
 class ProductIcons extends StatelessWidget {
   @override
@@ -10,14 +11,22 @@ class ProductIcons extends StatelessWidget {
         Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              height: 60,
-              width: 60,
-              margin: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/food-products-01.png'),
-                  // fit: BoxFit.fill,
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => FoodProduct()),
+                );
+              },
+              child: Container(
+                height: 60,
+                width: 60,
+                margin: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/food-products-01.png'),
+                    // fit: BoxFit.fill,
+                  ),
                 ),
               ),
             ),

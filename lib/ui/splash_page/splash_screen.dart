@@ -1,9 +1,9 @@
 import 'dart:async';
-import 'package:orizzo/info_pages/info_2.dart';
+// import 'package:orizzo/ui/info_pages/info_2.dart';
 
-import '../info_pages/info.dart';
+import '../info_page/info.dart';
 import 'package:flutter/material.dart';
-import '../const.dart';
+import 'package:orizzo/resources/const.dart';
 
 class SplashScreen extends StatefulWidget {
   @override

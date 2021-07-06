@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../const.dart';
+import 'package:orizzo/resources/const.dart';
 import '../info_component/left_bar.dart';
 import '../info_component/right_info.dart';
 

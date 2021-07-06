@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../const.dart';
-import '../product.dart';
+import 'package:orizzo/resources/const.dart';
+import 'package:orizzo/ui/product_page/product.dart';
 
 class LoginBottom extends StatelessWidget {
   @override

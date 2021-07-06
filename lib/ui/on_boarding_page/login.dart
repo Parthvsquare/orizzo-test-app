@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import '../const.dart';
-import '../other_components/header_about.dart';
-import '../other_components/next_button.dart';
+// import 'package:orizzo/resources/const.dart';
+import 'package:orizzo/util/next_button.dart';
+import 'package:orizzo/util/header_about.dart';
 import '../on_boarding_component/login_bottom_bt.dart';
 import '../on_boarding_component/login_input.dart';
-import '../product.dart';
+import 'package:orizzo/ui/product_page/product.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -36,15 +36,16 @@ class _LoginPageState extends State<LoginPage> {
           Expanded(
             flex: 1,
             child: GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ProductPage()),
-                  );
-                },
-                child: Container(
-                  child: NextButton('Login'),
-                )),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProductPage()),
+                );
+              },
+              child: Container(
+                child: NextButton('Login'),
+              ),
+            ),
           ),
           Expanded(
             flex: 1,
