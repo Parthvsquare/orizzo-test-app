@@ -75,7 +75,7 @@ class _ResturantMenuState extends State<ResturantMenu> {
             child: Container(
               width: double.infinity,
               // height: 300,
-              margin: EdgeInsets.only(left: 20, right: 20),
+              margin: EdgeInsets.only(left: 20, right: 20, bottom: 30),
               child: ProductCard(),
             ),
           ),

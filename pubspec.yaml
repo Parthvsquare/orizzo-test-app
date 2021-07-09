@@ -57,6 +57,7 @@ flutter:
     - assets/onboar-1-01.png
     - assets/onboar-2-01.png
     - assets/table-booking-01.png
+    - assets/placeholder-01.jpg
 
   # To add assets to your application, add an assets section, like this:
   # assets:

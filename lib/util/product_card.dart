@@ -15,18 +15,29 @@ class _ProductCardState extends State<ProductCard> {
     return Column(
       children: [
         Container(
-          width: 120,
-          margin: EdgeInsets.only(
-            top: 50,
-            bottom: 20,
-            left: 10,
-          ),
+          width: double.infinity,
+          height: 100,
+          // margin: EdgeInsets.only(
+          //   top: 50,
+          //   bottom: 20,
+          //   left: 10,
+          // ),
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/logo-landscape.png'),
+              image: AssetImage('assets/placeholder-01.jpg'),
               fit: BoxFit.fitWidth,
             ),
+            border:
+                Border.all(width: 4.0, style: BorderStyle.solid), //Border.all
+            /*** The BorderRadius widget  is here ***/
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
           ),
+          // child: Image.asset(
+          //   'assets/placeholder-01.jpg',
+          //   fit: BoxFit.cover,
+          // ),
         ),
         Container(
           child: Row(
