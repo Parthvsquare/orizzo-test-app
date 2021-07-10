@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:orizzo/ui/resturant_menu/resturant_menu_page.dart';
 import 'package:orizzo/ui/food_product_component/address_bar.dart';
 import 'package:orizzo/ui/food_product_component/search_bar.dart';
+import 'package:orizzo/util/header_nav.dart';
 import 'package:orizzo/util/product_card.dart';
 
 class FoodProduct extends StatefulWidget {
@@ -18,52 +19,9 @@ class _FoodProductState extends State<FoodProduct> {
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false, // simple as that!
-          title: Container(
-            width: 150,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                  child: Icon(
-                    Icons.arrow_back_ios,
-                    size: 30.0,
-                    semanticLabel: 'Text to announce in accessibility modes',
-                    color: Colors.black,
-                  ),
-                ),
-                Container(
-                  width: 120,
-                  child: Image.asset(
-                    'assets/logo-landscape.png',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          title: HeaderNavigation(),
           actions: [
-            Container(
-              width: 120,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Container(
-                    margin: EdgeInsets.all(15),
-                    child: Image.asset(
-                      'assets/addtocart-01.png',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(15),
-                    child: Image.asset(
-                      'assets/menu-01.png',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            HeaderActionNav(),
           ],
           backgroundColor: Colors.transparent,
           elevation: 0,

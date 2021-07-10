@@ -18,52 +18,9 @@ class _ResturantMenuState extends State<ResturantMenu> {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false, // simple as that!
-        title: Container(
-          width: 150,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  size: 30.0,
-                  semanticLabel: 'Text to announce in accessibility modes',
-                  color: Colors.black,
-                ),
-              ),
-              Container(
-                width: 120,
-                child: Image.asset(
-                  'assets/logo-landscape.png',
-                  fit: BoxFit.fitWidth,
-                ),
-              ),
-            ],
-          ),
-        ),
+        title: HeaderNavigation(),
         actions: [
-          Container(
-            width: 120,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                Container(
-                  margin: EdgeInsets.all(15),
-                  child: Image.asset(
-                    'assets/addtocart-01.png',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
-                Container(
-                  margin: EdgeInsets.all(15),
-                  child: Image.asset(
-                    'assets/menu-01.png',
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
-              ],
-            ),
-          ),
+          HeaderActionNav(),
         ],
         backgroundColor: Colors.transparent,
         elevation: 0,
