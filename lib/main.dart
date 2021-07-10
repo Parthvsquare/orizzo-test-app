@@ -11,7 +11,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
-      theme: new ThemeData(fontFamily: 'Cera'),
+      theme: new ThemeData(
+        fontFamily: 'Cera',
+      ),
       home: Material(
         child: SplashScreen(),
       ),

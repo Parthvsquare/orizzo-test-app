@@ -12,124 +12,128 @@ class _HamburgerMenuState extends State<HamburgerMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.transparent,
         body: SingleChildScrollView(
-      child: Container(
-        margin: EdgeInsets.only(left: 25),
-        width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Container(
-              padding: EdgeInsets.only(top: 30),
-              child: Text(
-                'My menu'.toUpperCase(),
-                style: TextStyle(
-                  fontSize: 18,
-                  fontFamily: "Cera",
-                  color: PrimaryAssentColor,
-                  fontWeight: FontWeight.w800,
-                  decoration: TextDecoration.none,
-                ),
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(right: 25),
-              child: Divider(
-                color: PrimaryColor,
-                height: 50,
-              ),
-            ),
-            Expanded(
-              flex: 0,
-              child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                      child: RowCreater(Icons.person_add, "My Wishlist"),
+          child: Container(
+            margin: EdgeInsets.only(left: 25),
+            width: double.infinity,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(top: 30),
+                  child: Text(
+                    'My menu'.toUpperCase(),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: "Cera",
+                      color: PrimaryAssentColor,
+                      fontWeight: FontWeight.w800,
+                      decoration: TextDecoration.none,
                     ),
-                    Container(
-                      child: RowCreater(Icons.person_add, "My Address"),
-                    ),
-                    Container(
-                        child:
-                            RowCreater(Icons.person_add, "Reference Points")),
-                    Container(
-                      child: RowCreater(Icons.person_add, "Offers"),
-                    ),
-                    Container(
-                        child: RowCreater(Icons.person_add, "Account Detail")),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 20, bottom: 20),
-              child: Text(
-                'login'.toUpperCase(),
-                style: TextStyle(
-                  fontSize: 18,
-                  fontFamily: "Cera",
-                  color: PrimaryAssentColor,
-                  fontWeight: FontWeight.w800,
-                  decoration: TextDecoration.none,
-                ),
-              ),
-            ),
-            Expanded(
-              flex: 0,
-              child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                        child: RowCreater(Icons.person_add, "About Orizzo")),
-                    Container(
-                        child: RowCreater(Icons.person_add, "Terms of use")),
-                    Container(
-                        child: RowCreater(
-                            Icons.privacy_tip_outlined, "Privacy Policy")),
-                    Container(
-                        child: RowCreater(
-                            Icons.ac_unit_rounded, "Delivery Policy")),
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              padding: EdgeInsets.only(top: 20, bottom: 20),
-              child: Text(
-                'List with orizzo'.toUpperCase(),
-                style: TextStyle(
-                  fontSize: 18,
-                  fontFamily: 'Cera',
-                  color: PrimaryAssentColor,
-                  fontWeight: FontWeight.w800,
-                  decoration: TextDecoration.none,
-                ),
-              ),
-            ),
-            Container(
-              width: double.infinity,
-              padding: EdgeInsets.only(top: 20, bottom: 20),
-              child: Center(
-                child: Text(
-                  'Orizzo. All Rights Reserved',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontFamily: 'Cera',
-                    color: PrimaryColor,
-                    fontWeight: FontWeight.w400,
-                    decoration: TextDecoration.none,
                   ),
                 ),
-              ),
-            )
-          ],
-        ),
-      ),
-    ));
+                Container(
+                  margin: EdgeInsets.only(right: 25),
+                  child: Divider(
+                    color: PrimaryColor,
+                    height: 50,
+                  ),
+                ),
+                Expanded(
+                  flex: 0,
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          child: RowCreater(Icons.person_add, "My Wishlist"),
+                        ),
+                        Container(
+                          child: RowCreater(Icons.person_add, "My Address"),
+                        ),
+                        Container(
+                            child: RowCreater(
+                                Icons.person_add, "Reference Points")),
+                        Container(
+                          child: RowCreater(Icons.person_add, "Offers"),
+                        ),
+                        Container(
+                            child:
+                                RowCreater(Icons.person_add, "Account Detail")),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 20, bottom: 20),
+                  child: Text(
+                    'login'.toUpperCase(),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: "Cera",
+                      color: PrimaryAssentColor,
+                      fontWeight: FontWeight.w800,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  flex: 0,
+                  child: Container(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                            child:
+                                RowCreater(Icons.person_add, "About Orizzo")),
+                        Container(
+                            child:
+                                RowCreater(Icons.person_add, "Terms of use")),
+                        Container(
+                            child: RowCreater(
+                                Icons.privacy_tip_outlined, "Privacy Policy")),
+                        Container(
+                            child: RowCreater(
+                                Icons.ac_unit_rounded, "Delivery Policy")),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(top: 20, bottom: 20),
+                  child: Text(
+                    'List with orizzo'.toUpperCase(),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontFamily: 'Cera',
+                      color: PrimaryAssentColor,
+                      fontWeight: FontWeight.w800,
+                      decoration: TextDecoration.none,
+                    ),
+                  ),
+                ),
+                Container(
+                  width: double.infinity,
+                  padding: EdgeInsets.only(top: 20, bottom: 20),
+                  child: Center(
+                    child: Text(
+                      'Orizzo. All Rights Reserved',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontFamily: 'Cera',
+                        color: PrimaryColor,
+                        fontWeight: FontWeight.w400,
+                        decoration: TextDecoration.none,
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+        ));
   }
 }
 

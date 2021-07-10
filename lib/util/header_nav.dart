@@ -84,14 +84,17 @@ class _HeaderActionNavState extends State<HeaderActionNav> {
   void profileMenu(context) {
     showModalBottomSheet(
         // shape: Border(left: ),
-        backgroundColor: Color.fromRGBO(247, 247, 247, 0.9),
+        backgroundColor: Colors.transparent,
         context: context,
         builder: (BuildContext bc) {
           return Container(
-            // height: MediaQuery.of(context).size.height * .90,
-
+            // height: MediaQuery.of(context).size.height * .1000,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(100),
+              color: Colors.white,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(10),
+                topRight: Radius.circular(10),
+              ),
             ),
             child: HamburgerMenu(),
           );
