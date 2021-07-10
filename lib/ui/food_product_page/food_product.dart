@@ -21,7 +21,7 @@ class _FoodProductState extends State<FoodProduct> {
           title: Container(
             width: 150,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
                   child: Icon(
@@ -32,10 +32,10 @@ class _FoodProductState extends State<FoodProduct> {
                   ),
                 ),
                 Container(
-                  width: 80,
+                  width: 120,
                   child: Image.asset(
                     'assets/logo-landscape.png',
-                    fit: BoxFit.fitHeight,
+                    fit: BoxFit.fitWidth,
                   ),
                 ),
               ],
