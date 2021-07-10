@@ -86,11 +86,12 @@ class _HeaderActionNavState extends State<HeaderActionNav> {
         // shape: Border(left: ),
         backgroundColor: Colors.transparent,
         context: context,
+        // isScrollControlled: true,
         builder: (BuildContext bc) {
           return Container(
             // height: MediaQuery.of(context).size.height * .1000,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: Color.fromRGBO(247, 247, 247, 10),
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(10),
                 topRight: Radius.circular(10),
@@ -99,5 +100,8 @@ class _HeaderActionNavState extends State<HeaderActionNav> {
             child: HamburgerMenu(),
           );
         });
+    // builder: (BuildContext bc) {
+    //   return
+    // });
   }
 }

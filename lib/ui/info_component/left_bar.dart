@@ -37,7 +37,7 @@ class LeftBar extends StatelessWidget {
                   inclinedText.toUpperCase(),
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.orange,
+                    color: PrimaryAssentColor,
                     fontFamily: 'Cera',
                     fontWeight: FontWeight.w700,
                     height: 0.9,
