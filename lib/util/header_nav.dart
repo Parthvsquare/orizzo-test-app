@@ -40,6 +40,7 @@ class HeaderActionNav extends StatefulWidget {
 }
 
 class _HeaderActionNavState extends State<HeaderActionNav> {
+  late var whichImage = "assets/menu-01.png";
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -54,13 +55,20 @@ class _HeaderActionNavState extends State<HeaderActionNav> {
               fit: BoxFit.fitWidth,
             ),
           ),
-          Container(
-            margin: EdgeInsets.all(15),
-            child: Image.asset(
-              'assets/menu-01.png',
-              fit: BoxFit.fitWidth,
+          GestureDetector(
+            onTap: () {
+              setState(() {
+                whichImage = "assets/addtocart-01.png";
+              });
+            },
+            child: Container(
+              margin: EdgeInsets.all(15),
+              child: Image.asset(
+                whichImage,
+                fit: BoxFit.fitWidth,
+              ),
             ),
-          ),
+          )
         ],
       ),
     );
