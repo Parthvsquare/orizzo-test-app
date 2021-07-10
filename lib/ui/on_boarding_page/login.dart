@@ -42,8 +42,15 @@ class _LoginPageState extends State<LoginPage> {
                 );
               },
               child: Container(
+                width: double.infinity,
+                margin: EdgeInsets.only(right: 150, left: 150),
                 child: NextButton('Login'),
               ),
+            ),
+          ),
+          Expanded(
+            child: Padding(
+              padding: EdgeInsets.all(20),
             ),
           ),
           Expanded(

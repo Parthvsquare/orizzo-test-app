@@ -45,8 +45,7 @@ class _LoginInputState extends State<LoginInput> {
                 borderRadius: BorderRadius.circular(20),
               ),
               focusedBorder: OutlineInputBorder(
-                borderSide: new BorderSide(
-                    color: Color.fromRGBO(0x219, 0x160, 0x120, 1)),
+                borderSide: new BorderSide(color: PrimaryAssentColor),
                 borderRadius: BorderRadius.circular(20),
               ),
               labelText: "Enter Password",
