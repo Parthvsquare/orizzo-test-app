@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:orizzo/resources/const.dart';
+import 'package:orizzo/ui/hamburger_menu_page/hamburger_menu.dart';
 
 class HeaderNavigation extends StatelessWidget {
   const HeaderNavigation({Key? key}) : super(key: key);
@@ -15,7 +17,7 @@ class HeaderNavigation extends StatelessWidget {
             child: Icon(
               Icons.arrow_back_ios,
               size: 30.0,
-              semanticLabel: 'Text to announce in accessibility modes',
+              semanticLabel: 'to go back',
               color: Colors.black,
             ),
           ),
@@ -57,9 +59,14 @@ class _HeaderActionNavState extends State<HeaderActionNav> {
           ),
           GestureDetector(
             onTap: () {
-              setState(() {
-                whichImage = "assets/addtocart-01.png";
-              });
+              // setState(() {
+              //   whichImage = "assets/addtocart-01.png";
+              // });
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => HamburgerMenu()),
+              // );
+              profileMenu(context);
             },
             child: Container(
               margin: EdgeInsets.all(15),
@@ -72,5 +79,22 @@ class _HeaderActionNavState extends State<HeaderActionNav> {
         ],
       ),
     );
+  }
+
+  void profileMenu(context) {
+    showModalBottomSheet(
+        // shape: Border(left: ),
+        backgroundColor: Color.fromRGBO(247, 247, 247, 0.9),
+        context: context,
+        builder: (BuildContext bc) {
+          return Container(
+            // height: MediaQuery.of(context).size.height * .90,
+
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: HamburgerMenu(),
+          );
+        });
   }
 }

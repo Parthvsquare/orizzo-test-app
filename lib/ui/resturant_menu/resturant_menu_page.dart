@@ -86,12 +86,13 @@ class _ResturantMenuState extends State<ResturantMenu> {
                     Row(children: <Widget>[
                       Expanded(
                         child: new Container(
-                            margin:
-                                const EdgeInsets.only(left: 33.0, right: 14.0),
-                            child: Divider(
-                              color: PrimaryAssentColor,
-                              height: 50,
-                            )),
+                          margin:
+                              const EdgeInsets.only(left: 33.0, right: 14.0),
+                          child: Divider(
+                            color: PrimaryAssentColor,
+                            height: 50,
+                          ),
+                        ),
                       ),
                       Text(
                         "Food order & delivery".toUpperCase(),
