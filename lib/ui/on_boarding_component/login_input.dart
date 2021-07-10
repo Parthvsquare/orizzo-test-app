@@ -34,6 +34,11 @@ class _LoginInputState extends State<LoginInput> {
             suffixStyle: TextStyle(
               color: PrimaryColor,
             ),
+            prefixIcon: Icon(
+              Icons.ac_unit,
+              color: Colors.transparent,
+              size: 8,
+            ),
           ),
         ),
         Padding(
@@ -57,6 +62,11 @@ class _LoginInputState extends State<LoginInput> {
               suffixIcon: Icon(Icons.remove_red_eye),
               suffixStyle: TextStyle(
                 color: PrimaryColor,
+              ),
+              prefixIcon: Icon(
+                Icons.ac_unit,
+                color: Colors.transparent,
+                size: 8,
               ),
             ),
           ),
