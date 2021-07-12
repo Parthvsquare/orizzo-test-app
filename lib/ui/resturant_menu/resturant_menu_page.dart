@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orizzo/resources/const.dart';
+import 'package:orizzo/ui/book_table_page/book_table.dart';
 import 'package:orizzo/ui/resturant_menu_component/product_menu_card.dart';
 import 'package:orizzo/util/header_nav.dart';
 import 'package:orizzo/util/next_button.dart';
@@ -40,9 +41,17 @@ class _ResturantMenuState extends State<ResturantMenu> {
             flex: 0,
             child: Column(
               children: [
-                Container(
-                  width: 250,
-                  child: NextButton("Book a table now"),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => BookTable()),
+                    );
+                  },
+                  child: Container(
+                    width: 250,
+                    child: NextButton("Book a table now"),
+                  ),
                 ),
                 Container(
                   child: Column(
