@@ -11,13 +11,16 @@ class BookTableTime extends StatefulWidget {
 }
 
 class _BookTableTimeState extends State<BookTableTime> {
+  var thetextcolor = Colors.black;
+  var thebgcolor = Colors.white;
   @override
   Widget build(BuildContext context) {
     return Container(
       child: GestureDetector(
         onTap: () {
           setState(() {
-            //change bg color
+            thetextcolor = Colors.white;
+            thebgcolor = PrimaryAssentColor;
           });
         },
         child: Container(
@@ -25,7 +28,7 @@ class _BookTableTimeState extends State<BookTableTime> {
             width: 110,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.all(Radius.circular(15)),
-                // color: PrimaryAssentColor,
+                color: thebgcolor,
                 border: Border.all(
                   color: PrimaryAssentColor,
                   width: 2,
