@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orizzo/resources/const.dart';
 import 'package:orizzo/ui/book_table_page/book_table.dart';
+import 'package:orizzo/ui/product_detail_page/product_detail.dart';
 import 'package:orizzo/ui/resturant_menu_component/product_menu_card.dart';
 import 'package:orizzo/util/header_nav.dart';
 import 'package:orizzo/util/next_button.dart';
@@ -163,11 +164,21 @@ class _ResturantMenuState extends State<ResturantMenu> {
                     ],
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.only(top: 20),
-                  margin: EdgeInsets.only(right: 20, left: 20),
-                  child: ProductMenuCard(),
-                ),
+
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ProductDetail()),
+                    );
+                  },
+                  child: Container(
+                    padding: EdgeInsets.only(top: 20),
+                    margin: EdgeInsets.only(right: 20, left: 20),
+                    child: ProductMenuCard(),
+                  ),
+                )
+
                 // Container(
                 //   child: ProductMenuCard(),
                 // ),
