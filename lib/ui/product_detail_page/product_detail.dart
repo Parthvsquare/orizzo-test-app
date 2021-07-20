@@ -30,25 +30,28 @@ class ProductDetail extends StatelessWidget {
         children: [
           // Padding(padding: EdgeInsets.all(20), child: ,),
           Container(
-            margin: EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 20),
+            margin: EdgeInsets.only(top: 20, right: 20, left: 20, bottom: 10),
             height: height / 2.5,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/placeholder-01.jpg'),
-                fit: BoxFit.fitHeight,
-              ),
-              borderRadius: BorderRadius.circular(15),
-            ),
             child: Stack(
               clipBehavior: Clip.antiAlias,
               children: [
+                Container(
+                  height: height / 2.65,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage('assets/placeholder-01.jpg'),
+                      fit: BoxFit.fitHeight,
+                    ),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                ),
                 Positioned(
                   bottom: 0.0,
                   left: width / 2.5,
                   child: Container(
                     // margin: EdgeInsets.only(left: width / 2.5),
                     // height: 50,
-                    padding: EdgeInsets.all(6),
+                    padding: EdgeInsets.all(8),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       border: Border.all(
