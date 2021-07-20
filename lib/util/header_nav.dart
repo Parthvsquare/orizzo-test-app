@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:orizzo/resources/const.dart';
+import 'package:orizzo/ui/cart_page/cart_page.dart';
 import 'package:orizzo/ui/hamburger_menu_page/hamburger_menu.dart';
 
 class HeaderNavigation extends StatelessWidget {
@@ -50,11 +51,21 @@ class _HeaderActionNavState extends State<HeaderActionNav> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Container(
-            margin: EdgeInsets.all(15),
-            child: Image.asset(
-              'assets/addtocart-01.png',
-              fit: BoxFit.fitWidth,
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CartPageScreen(),
+                ),
+              );
+            },
+            child: Container(
+              margin: EdgeInsets.all(15),
+              child: Image.asset(
+                'assets/addtocart-01.png',
+                fit: BoxFit.fitWidth,
+              ),
             ),
           ),
           GestureDetector(
