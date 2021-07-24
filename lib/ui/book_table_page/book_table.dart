@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_lorem/flutter_lorem.dart';
 import 'package:orizzo/ui/book_table_component/book_table_slider.dart';
 import 'package:orizzo/ui/book_table_component/book_table_time.dart';
+import 'package:orizzo/ui/confirm_book_table/confirm_book_table.dart';
 import 'package:orizzo/util/header_nav.dart';
+import 'package:orizzo/util/next_button.dart';
 
 class BookTable extends StatefulWidget {
   const BookTable({Key? key}) : super(key: key);
@@ -102,7 +104,7 @@ class _BookTableState extends State<BookTable> {
           Expanded(
             flex: 0,
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 30),
+              margin: EdgeInsets.only(left: 20, top: 10),
               width: double.infinity,
               child: Text(
                 'Description'.toUpperCase(),
@@ -120,7 +122,7 @@ class _BookTableState extends State<BookTable> {
               margin: EdgeInsets.only(left: 20, top: 20),
               width: double.infinity,
               child: Text(
-                lorem(paragraphs: 1),
+                lorem(paragraphs: 1, words: 20),
                 style: TextStyle(
                   color: Colors.black,
                   fontSize: 12,
@@ -129,6 +131,23 @@ class _BookTableState extends State<BookTable> {
               ),
             ),
           ),
+          Expanded(
+            flex: 0,
+            child: Container(
+                margin: EdgeInsets.only(bottom: 30, left: 80, right: 80),
+                width: double.infinity,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ConfirmBookTable(),
+                      ),
+                    );
+                  },
+                  child: NextButton('Book a table now'),
+                )),
+          )
         ],
       ),
     );
