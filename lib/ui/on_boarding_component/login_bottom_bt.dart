@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:orizzo/resources/const.dart';
 import 'package:orizzo/ui/product_page/product.dart';
+import 'package:orizzo/ui/registeration_page/registeration_page.dart';
 
 class LoginBottom extends StatelessWidget {
   @override
@@ -31,16 +32,24 @@ class LoginBottom extends StatelessWidget {
           ),
         ),
         Container(
-          child: Text(
-            'Register with orrizo'.toUpperCase(),
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 16,
-              color: PrimaryAssentColor,
-              fontFamily: 'Cera',
-              fontWeight: FontWeight.w700,
-              decoration: TextDecoration.none,
-              height: 0.7,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => RegisterationPage()),
+              );
+            },
+            child: Text(
+              'Register with orrizo'.toUpperCase(),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                color: PrimaryAssentColor,
+                fontFamily: 'Cera',
+                fontWeight: FontWeight.w700,
+                decoration: TextDecoration.none,
+                height: 0.7,
+              ),
             ),
           ),
         ),

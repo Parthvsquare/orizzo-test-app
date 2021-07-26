@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:orizzo/resources/const.dart';
+import 'package:orizzo/ui/forgot_password/forgot_password_page.dart';
 
 class LoginInput extends StatefulWidget {
   const LoginInput({Key? key}) : super(key: key);
@@ -75,16 +76,24 @@ class _LoginInputState extends State<LoginInput> {
           height: 10,
           margin: EdgeInsets.only(top: 10),
           width: double.infinity,
-          child: Text(
-            'Forgot Password?',
-            textAlign: TextAlign.right,
-            style: TextStyle(
-              fontSize: 14,
-              color: PrimaryColor,
-              fontFamily: 'Cera',
-              fontWeight: FontWeight.w300,
-              decoration: TextDecoration.none,
-              height: 0.7,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ForgotPasswordPage()),
+              );
+            },
+            child: Text(
+              'Forgot Password?',
+              textAlign: TextAlign.right,
+              style: TextStyle(
+                fontSize: 14,
+                color: PrimaryColor,
+                fontFamily: 'Cera',
+                fontWeight: FontWeight.w300,
+                decoration: TextDecoration.none,
+                height: 0.7,
+              ),
             ),
           ),
         )
