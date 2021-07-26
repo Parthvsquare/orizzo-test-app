@@ -17,8 +17,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     height = size.height;
     width = size.width;
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      body: ListView(
+        // mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(padding: EdgeInsets.all(height / 14)),
           Container(
@@ -63,6 +63,11 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 suffixIcon: Icon(Icons.mail_outline),
                 suffixStyle: TextStyle(
                   color: PrimaryColor,
+                ),
+                prefixIcon: Icon(
+                  Icons.ac_unit,
+                  color: Colors.transparent,
+                  size: 6,
                 ),
               ),
             ),

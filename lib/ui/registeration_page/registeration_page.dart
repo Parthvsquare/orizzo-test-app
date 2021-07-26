@@ -18,8 +18,8 @@ class _RegisterationPageState extends State<RegisterationPage> {
     height = size.height;
     width = size.width;
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: ListView(
+        // mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
             height: height / 7,
@@ -152,6 +152,11 @@ class _RegisterInputFieldState extends State<RegisterInputField> {
           suffixIcon: Icon(widget.sufixicon),
           suffixStyle: TextStyle(
             color: PrimaryColor,
+          ),
+          prefixIcon: Icon(
+            Icons.ac_unit,
+            color: Colors.transparent,
+            size: 6,
           ),
         ),
       ),
