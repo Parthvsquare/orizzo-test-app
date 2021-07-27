@@ -29,13 +29,12 @@ class _BookTableState extends State<BookTable> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Expanded(
-            flex: 2,
-            child: Container(
-              margin: EdgeInsets.all(20),
-              width: double.infinity,
-              child: BookTableImages(),
-            ),
+          Container(
+            // height: 200,
+            height: MediaQuery.of(context).size.height * 0.25,
+            margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+            width: double.infinity,
+            child: BookTableImages(),
           ),
           Expanded(
             flex: 0,

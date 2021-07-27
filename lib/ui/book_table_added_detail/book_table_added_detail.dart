@@ -26,13 +26,12 @@ class _BookTableAddedDetailState extends State<BookTableAddedDetail> {
       ),
       body: Column(
         children: [
-          Expanded(
-            flex: 1,
-            child: Container(
-              margin: EdgeInsets.all(20),
-              width: double.infinity,
-              child: BookTableImages(),
-            ),
+          Container(
+            // height: 200,
+            height: MediaQuery.of(context).size.height * 0.25,
+            margin: EdgeInsets.only(top: 20, left: 20, right: 20),
+            width: double.infinity,
+            child: BookTableImages(),
           ),
           Expanded(
             flex: 0,
@@ -141,10 +140,9 @@ class _BookTableAddedDetailState extends State<BookTableAddedDetail> {
           ),
           Expanded(
               child: Container(
-            margin: EdgeInsets.only(left: 70, right: 70),
+            margin: EdgeInsets.only(left: 130, right: 130),
             width: double.infinity,
-            // alignment: Alignment.topCenter,
-            child: NextButton('Confirm and proceed'),
+            child: NextButton('Confirm'),
           ))
         ],
       ),
