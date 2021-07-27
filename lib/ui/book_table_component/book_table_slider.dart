@@ -30,11 +30,13 @@ class _BookTableImagesState extends State<BookTableImages> {
           CarouselSlider(
             options: CarouselOptions(
               height: 150.0,
+              // enlargeCenterPage: true,
               // autoPlay: true,
               // autoPlayInterval: Duration(seconds: 3),
               // autoPlayAnimationDuration: Duration(milliseconds: 800),
               // autoPlayCurve: Curves.fastOutSlowIn,
               pauseAutoPlayOnTouch: true,
+              viewportFraction: 1,
               aspectRatio: 16 / 9,
               onPageChanged: (index, reason) {
                 setState(() {
@@ -61,9 +63,8 @@ class _BookTableImagesState extends State<BookTableImages> {
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                 decoration: BoxDecoration(
                   shape: BoxShape.rectangle,
-                  color: _currentIndex == index
-                      ? PrimaryAssentColor
-                      : PrimaryColor,
+                  color:
+                      _currentIndex == index ? Color(0xFF59966B) : PrimaryColor,
                 ),
               );
             }),
