@@ -54,7 +54,7 @@ class _BookTableState extends State<BookTable> {
           Expanded(
             flex: 0,
             child: Container(
-              margin: EdgeInsets.only(left: 20, top: 30, bottom: 30),
+              margin: EdgeInsets.only(left: 20, top: 30, bottom: 20),
               width: double.infinity,
               child: Text(
                 'Select date & time'.toUpperCase(),
@@ -69,6 +69,7 @@ class _BookTableState extends State<BookTable> {
           Expanded(
             child: Container(
                 width: double.infinity,
+                // margin: EdgeInsets.only(bottom: 20),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -100,33 +101,28 @@ class _BookTableState extends State<BookTable> {
                 //BookTableTime('this'),
                 ),
           ),
-          Expanded(
-            flex: 0,
-            child: Container(
-              margin: EdgeInsets.only(left: 20, top: 10),
-              width: double.infinity,
-              child: Text(
-                'Description'.toUpperCase(),
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w900,
-                ),
+          Container(
+            margin: EdgeInsets.only(left: 20, top: 10),
+            width: double.infinity,
+            child: Text(
+              'Description'.toUpperCase(),
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 16,
+                fontWeight: FontWeight.w900,
               ),
             ),
           ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              margin: EdgeInsets.only(left: 20, top: 20),
-              width: double.infinity,
-              child: Text(
-                lorem(paragraphs: 1, words: 20),
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w300,
-                ),
+          Container(
+            height: MediaQuery.of(context).size.height * 0.15,
+            margin: EdgeInsets.only(left: 20, top: 20),
+            width: double.infinity,
+            child: Text(
+              lorem(paragraphs: 1, words: 20),
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 12,
+                fontWeight: FontWeight.w300,
               ),
             ),
           ),
