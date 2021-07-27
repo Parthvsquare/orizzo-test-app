@@ -47,10 +47,7 @@ class _BookTableImagesState extends State<BookTableImages> {
                 return Container(
                   height: MediaQuery.of(context).size.height * 0.60,
                   width: MediaQuery.of(context).size.width,
-                  child: Card(
-                    color: Colors.white,
-                    child: card,
-                  ),
+                  child: card,
                 );
               });
             }).toList(),
