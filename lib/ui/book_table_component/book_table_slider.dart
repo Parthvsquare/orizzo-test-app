@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:orizzo/resources/const.dart';
 
 class BookTableImages extends StatefulWidget {
   const BookTableImages({Key? key}) : super(key: key);
@@ -58,13 +59,14 @@ class _BookTableImagesState extends State<BookTableImages> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: map<Widget>(cardList, (index, url) {
               return Container(
-                width: 10.0,
-                height: 10.0,
+                width: _currentIndex == index ? 20.0 : 10.0,
+                height: 2.0,
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
                 decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color:
-                      _currentIndex == index ? Colors.blueAccent : Colors.grey,
+                  shape: BoxShape.rectangle,
+                  color: _currentIndex == index
+                      ? PrimaryAssentColor
+                      : PrimaryColor,
                 ),
               );
             }),
