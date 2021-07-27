@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:orizzo/resources/const.dart';
-import 'package:orizzo/ui/book_table_added_detail/book_table_added_detail.dart';
 import 'package:orizzo/ui/book_table_component/book_table_slider.dart';
 import 'package:orizzo/util/header_nav.dart';
 import 'package:orizzo/util/next_button.dart';
 
-class ConfirmBookTable extends StatefulWidget {
-  const ConfirmBookTable({Key? key}) : super(key: key);
+class BookTableAddedDetail extends StatefulWidget {
+  const BookTableAddedDetail({Key? key}) : super(key: key);
 
   @override
-  _ConfirmBookTableState createState() => _ConfirmBookTableState();
+  _BookTableAddedDetailState createState() => _BookTableAddedDetailState();
 }
 
-class _ConfirmBookTableState extends State<ConfirmBookTable> {
+class _BookTableAddedDetailState extends State<BookTableAddedDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -128,72 +127,26 @@ class _ConfirmBookTableState extends State<ConfirmBookTable> {
             ),
           ),
           Expanded(
-            child: Column(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 50),
-                  child: BookTableInputField(
-                    hintname: 'Enter Email',
-                  ),
+            child: Container(
+              child: Center(
+                child: Text(
+                  'Abishek, +974 1234 5678',
+                  style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: PrimaryAssentColor),
                 ),
-                Container(
-                  margin: EdgeInsets.only(left: 20, right: 20, top: 10),
-                  child: BookTableInputField(
-                    hintname: 'Enter Password',
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
           Expanded(
               child: Container(
             margin: EdgeInsets.only(left: 70, right: 70),
             width: double.infinity,
-            child: GestureDetector(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => BookTableAddedDetail()),
-                );
-              },
-              child: NextButton('Confirm and proceed'),
-            ),
+            // alignment: Alignment.topCenter,
+            child: NextButton('Confirm and proceed'),
           ))
         ],
-      ),
-    );
-  }
-}
-
-class BookTableInputField extends StatefulWidget {
-  final String hintname;
-  const BookTableInputField({Key? key, required this.hintname})
-      : super(key: key);
-
-  @override
-  _BookTableInputFieldState createState() => _BookTableInputFieldState();
-}
-
-class _BookTableInputFieldState extends State<BookTableInputField> {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: TextField(
-        decoration: InputDecoration(
-          hintText: widget.hintname,
-          hintStyle:
-              TextStyle(fontWeight: FontWeight.bold, color: PrimaryColor),
-          border: UnderlineInputBorder(
-            borderSide: BorderSide(color: PrimaryAssentColor),
-          ),
-          enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: PrimaryAssentColor),
-          ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: PrimaryAssentColor),
-          ),
-        ),
       ),
     );
   }
